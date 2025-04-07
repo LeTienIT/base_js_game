@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Game Hỏi Đáp</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="main">
+        <button id="toggle-sound" title="Tắt/Bật âm" class="sound-btn">🔊</button>
+        <div id="loader">
+            <div class="dot-spinner">
+                <div class="dot-spinner__dot"></div>
+                <div class="dot-spinner__dot"></div>
+                <div class="dot-spinner__dot"></div>
+                <div class="dot-spinner__dot"></div>
+                <div class="dot-spinner__dot"></div>
+                <div class="dot-spinner__dot"></div>
+                <div class="dot-spinner__dot"></div>
+                <div class="dot-spinner__dot"></div>
+            </div>
+        </div>
+        <div id="leaderboard-screen">
+            <h1 class="glow">🏆 Bảng Xếp Hạng</h1>
+            <table id="leaderboard">
+            <thead>
+                <tr><th>Tên</th><th>Điểm Cao Nhất</th></tr>
+            </thead>
+            <tbody id="leaderboard-body"></tbody>
+            </table>
+            <br>
+            <button id="goToGame">Bắt đầu chơi</button>
+        </div>
+        <div id="game-screen" style="display: none;">
+            <h1 class="glow">🧠 Hỏi Đáp</h1>
+            <div id="question" class="glow-box">Câu hỏi sẽ hiển thị ở đây</div>
+            <div id="time_score">
+                <div id="timer">Thời gian: 30</div>
+                <div id="score">Điểm: 0</div>
+            </div>
+            
+            <input type="text" id="answer" placeholder="Nhập câu trả lời...">
+            <br>
+            <button id="btn-submit">Trả lời</button>
+            <div id="result"></div>
+            
+            <br>
+            <button id="back-btn" style="display: none;">🔙 Quay về bảng xếp hạng</button>
+        </div>
+    
+        <script src="game.js"></script>
+    </div>
+</body>
+</html>
